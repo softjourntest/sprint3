@@ -107,5 +107,8 @@
       "preventAutoDismiss": true
     }
   ],
-  "startScreen": "login"
+  "startScreen": "login",
+  "statusbarContent": "dark",
+  "statusbarHidden": false,
+  "statusbarBackground": null
 }
