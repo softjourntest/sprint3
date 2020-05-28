@@ -1,0 +1,26 @@
+{
+  "attachments": [
+    {
+      "date": "Jan 03, 2018",
+      "merchant": "Apple",
+      "total": "$1299.99"
+    }
+  ],
+  "totalAmount": "$1699.98",
+  "id": "26561415",
+  "reporter": "Grace Howell",
+  "description": "New Laptop",
+  "merchant": "Apple",
+  "date": "Jan 03, 2018",
+  "category": "Computer and Internet",
+  "customerJob": "NA",
+  "comment": "Mac Book Pro, 13\" Touch Bar and Touch ID\n3.1GHz Processor \n256GB Storage",
+  "comments": "",
+  "amount": "$1299.99",
+  "type": "",
+  "priority": "",
+  "subject": "",
+  "bugID": "$1549.57",
+  "quoteID": "",
+  "status": "Submitted"
+}

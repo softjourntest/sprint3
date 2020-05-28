@@ -1,0 +1,20 @@
+screen-detailssalesforceoppor-phoneportrait {
+    ion-list ion-item.item {
+        
+        ion-label {
+            font-size: 14px; 
+            white-space: normal;
+        }
+    }
+
+    ion-list ion-item.item.inset {
+        background-color: #ffffff;
+        margin: 10px;
+        width: calc(100% - 20px);
+
+        ion-label {
+            color: #000000;
+        }
+    }
+    
+}

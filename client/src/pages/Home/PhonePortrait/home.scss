@@ -1,0 +1,11 @@
+screen-home-phoneportrait {
+    .item-block.approval-item {
+        > div.item-inner {
+            padding: 0px;
+
+            ion-label.label {
+                margin: 0px;
+            }
+        }
+    }
+}

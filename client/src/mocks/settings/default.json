@@ -1,0 +1,17 @@
+{
+  "expensify": {
+    "connected": true
+  },
+  "sapPo": {
+    "errorMessage": "",
+    "connected": false
+  },
+  "sapOpp": {
+    "errorMessage": "",
+    "connected": true
+  },
+  "peoplesoft": {
+    "errorMessage": "Login Failed",
+    "connected": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "approvals": [
+    {
+      "$source": "salesforce",
+      "salesforce": {
+        "amount": "25,000",
+        "vendor": "Acme Company Inc.",
+        "date": "January 10, 2018",
+        "employee": "Trevor Howard",
+        "dataPrefix": "$",
+        "imagePath": "assets/images/salesforce.png"
+      },
+      "isNew": true,
+      "resolved": false
+    },
+    {
+      "$source": "sap",
+      "sap": {
+        "amount": "1499.5",
+        "expenseItem": "Printer Ink",
+        "date": "January 08, 2018",
+        "employee": "Chad Mendoza",
+        "dataPrefix": "$",
+        "imagePath": "assets/images/sap.png"
+      },
+      "resolved": true,
+      "approved": true
+    },
+    {
+      "$source": "expensify",
+      "expensify": {
+        "amount": "1699.98",
+        "expenseItem": "New Laptop",
+        "date": "Jan 05, 2018",
+        "employee": "Grace Howell",
+        "dataPrefix": "$",
+        "imagePath": "assets/images/expensify.png"
+      },
+      "isNew": true,
+      "resolved": false
+    },
+    {
+      "$source": "peoplesoft",
+      "peoplesoft": {
+        "amount": "40",
+        "project": "Project - Lorem Ipsum",
+        "dates": "January 7, 2018 - January 13, 2018",
+        "employee": "Corey, Elise",
+        "imagePath": "assets/images/peoplesoft.png"
+      },
+      "resolved": "true",
+      "rejected": true
+    }
+  ],
+  "sortBy": {
+    "options": [
+      {
+        "label": "All"
+      },
+      {
+        "label": "Salesforce"
+      },
+      {
+        "label": "Expensify"
+      },
+      {
+        "label": "SAP"
+      },
+      {
+        "label": "Peoplesoft"
+      }
+    ],
+    "selected": {
+      "label": "All"
+    }
+  }
+}

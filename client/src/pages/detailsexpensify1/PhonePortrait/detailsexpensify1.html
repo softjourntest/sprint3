@@ -1,0 +1,134 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="contrast" data-comp-id="navbar.1">
+        <ion-buttons data-comp-id="buttons.1" left="">
+            <button (click)="action('back')" data-comp-id="button.1" ion-button="" icon-only=""
+                style="font-size: 24px;">
+                <ion-icon class="ion-ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title data-comp-id="title.1" text-center="">
+            <div data-comp-id="text.19" ion-text="">Expense Report </div>
+        </ion-title>
+        <ion-buttons data-comp-id="buttons.2" right=""></ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content-contrast" data-comp-id="content.1">
+    <ion-list class="list-container-light" data-comp-id="list.1" no-lines=""
+        style="margin: 10px;">
+        <ion-list-header color="white" data-comp-id="list-header.1">
+            <ion-row data-comp-id="row.1">
+                <ion-col data-comp-id="column.1">
+                    <img data-comp-id="img.1" src="assets/images/expensify.png" style="width: 44px;"></ion-col>
+                <ion-col data-comp-id="column.2" style="text-align: right;">
+                    <div color="primary" data-comp-id="text.1" ion-text="" style="font-size: 22px;"></div>
+                </ion-col>
+            </ion-row>
+            <ion-row data-comp-id="row.2">
+                <ion-col data-comp-id="column.3">
+                    <div [innerHTML]="data.id" color="dark" data-comp-id="text.2" ion-text=""
+                        style="font-size: 16px;"></div>
+                    <div [innerHTML]="data.reporter" color="coal" data-comp-id="text.3" ion-text=""
+                        style="font-size: 20px;"></div>
+                    <div color="dark" data-comp-id="text.4" ion-text="" style="font-size: 16px;"></div>
+                </ion-col>
+            </ion-row>
+        </ion-list-header>
+        <ion-item-divider color="calm" data-comp-id="item.1" detail-none=""
+            style="border-top: 1px solid rgb(221,221,221); border-bottom: 1px solid rgb(221,221,221);">
+            <div color="dark" data-comp-id="text.5" ion-text="" style="font-size: 14px;">Category:</div>
+            <div [innerHTML]="data.category" data-comp-id="text.6" ion-text=""
+                style="whiteSpace: normal;"></div>
+        </ion-item-divider>
+        <div data-comp-id="div.1">
+            <ion-card (click)="action('categoryOne[item].details', [i])"
+                *ngFor="let item of data.categoryOne;let i = index" data-comp-id="card.1">
+                <ion-row data-comp-id="row.3" style="padding: 5px;">
+                    <ion-col data-comp-id="column.4">
+                        <div [innerHTML]="item.merchant" data-comp-id="text.7" ion-text=""
+                            style="font-size: 20px; float: left;">APPLE</div>
+                        <div [innerHTML]="item.date" color="dark" data-comp-id="text.8" ion-text=""
+                            style="float: right;"></div>
+                    </ion-col>
+                </ion-row>
+                <ion-row data-comp-id="row.4" style="padding: 5px;">
+                    <ion-col data-comp-id="column.5">
+                        <div [innerHTML]="item.comment" data-comp-id="text.9" ion-text="">Some text</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row data-comp-id="row.5" style="padding: 5px;">
+                    <ion-col col-2="" data-comp-id="column.6" style="margin: 0 5px;">
+                        <ion-icon class="ion-md-copy" color="stable" data-comp-id="icon.1"
+                            style="font-size: 26px;"></ion-icon>
+                        <div [innerHTML]="item.attachmentsNumber" color="medium" data-comp-id="text.10"
+                            ion-text="" style="float: right;">+1</div>
+                    </ion-col>
+                    <ion-col data-comp-id="column.7">
+                        <div [innerHTML]="item.amount" color="primary" data-comp-id="text.11"
+                            ion-text="" style="font-size: 24px; float: right;"></div>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </div>
+        <ion-item-divider color="balanced" data-comp-id="item.2" detail-none=""
+            style="border-top: 1px solid rgb(221,221,221); border-bottom: 1px solid rgb(221,221,221);">
+            <div data-comp-id="text.12" ion-text="">Report History & Comments</div>
+        </ion-item-divider>
+        <ion-row *ngFor="let item of data.historyComments;let i = index"
+            data-comp-id="row.6"
+            style="padding: 5px; border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col data-comp-id="column.8">
+                <div [innerHTML]="item.date" color="dark" data-comp-id="text.13" ion-text=""
+                    style="line-height: 24px;"></div>
+                <div [innerHTML]="item.comment" data-comp-id="text.14" ion-text="">Some text</div>
+            </ion-col>
+        </ion-row>
+        <ion-item data-comp-id="textarea.1">
+            <ion-label stacked="">Comment on this report ...</ion-label>
+            <ion-textarea [(ngModel)]="data.comment" placeholder="Type here..." rows="10"></ion-textarea>
+        </ion-item>
+        <ion-row data-comp-id="row.7">
+            <ion-col data-comp-id="column.9">
+                <button (click)="action('postComment')" block="" data-comp-id="button.1"
+                    ion-button="" outline="" small=""><span>Post Comment</span></button>
+            </ion-col>
+        </ion-row>
+        <ion-item-divider color="balanced" data-comp-id="item.3" detail-none=""
+            style="border-top: 1px solid rgb(221,221,221); border-bottom: 1px solid rgb(221,221,221);">
+            <div data-comp-id="text.15" ion-text="">Receipt Thumbnails</div>
+        </ion-item-divider>
+        <ion-row *ngFor="let item of data.attachments;let i = index"
+            data-comp-id="row.8">
+            <ion-col data-comp-id="column.10"
+                style="border-bottom: 1px solid rgb(221,221,221);"><img data-comp-id="img.2" src="assets/images/default.png"
+                style="float: left; margin: 5px 10px 10px 0px; border: 1px solid rgb(221,221,221);">
+                <div [innerHTML]="item.date" color="dark" data-comp-id="text.16" ion-text=""
+                    style="line-height: 24px;"></div>
+                <div [innerHTML]="item.merchant" data-comp-id="text.17" ion-text=""
+                    style="line-height: 24px;">Some text</div>
+                <div [innerHTML]="item.total" data-comp-id="text.18" ion-text=""
+                    style="line-height: 24px; font-size: 16px;">Some text</div>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+</ion-content>
+<ion-footer data-comp-id="footer.1">
+    <ion-row data-comp-id="row.9" style="padding: 10px;">
+        <ion-col data-comp-id="column.11">
+            <button (click)="action('reject')" block="" color="danger"
+                data-comp-id="button.2" ion-button="" outline="" small=""
+                style="background-color: #fff;">
+                <ion-icon class="ion-ios-close" style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                <span ion-text="">Reject</span>
+            </button>
+        </ion-col>
+        <ion-col data-comp-id="column.12">
+            <button (click)="action('approve')" block="" color="good"
+                data-comp-id="button.3" ion-button="" outline="" small=""
+                style="background-color: #fff;">
+                <ion-icon class="ion-ios-checkmark-outline" color="good"
+                    style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                <span ion-text="">Approve</span>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

@@ -1,0 +1,37 @@
+{
+  "Details": [
+    {
+      "key": "Submitter",
+      "value": "Nella Parker"
+    },
+    {
+      "key": "Assigned To",
+      "value": "Global Solutions"
+    },
+    {
+      "key": "Opened",
+      "value": "3 Aug 2017"
+    },
+    {
+      "key": "Priority",
+      "value": "High"
+    }
+  ],
+  "QuoteID": "",
+  "description": "Printer Ink",
+  "reporter": "Chad Mendoza",
+  "submittedDate": "January 08, 2018",
+  "commodityCode": "28398",
+  "purchaseType": "Office Supplies",
+  "localAccount": "Account",
+  "companyCode": "982ABC",
+  "currency": "dollars",
+  "orderQuanity": "50",
+  "unit": "10",
+  "price": "29.99",
+  "deliveryDate": "February 01, 2018",
+  "location": "San Francisco",
+  "recipient": "Joan Payne",
+  "vendorNumber": "KJ9103",
+  "amount": "$1499.50"
+}

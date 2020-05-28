@@ -1,0 +1,144 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="contrast" data-comp-id="navbar.1">
+        <ion-buttons data-comp-id="buttons.1" start="">
+            <button (click)="action('back')" data-comp-id="button.1" icon-only=""
+                ion-button="">
+                <ion-icon class="ion-ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title data-comp-id="title.1">
+            <div data-comp-id="text.21" ion-text="">Expense Details</div>
+        </ion-title>
+        <ion-buttons data-comp-id="buttons.2" end="">
+            <button data-comp-id="button.2" icon-only="" ion-button="">
+                <ion-icon></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content-contrast" data-comp-id="content.1">
+    <ion-row class="row-calm" data-comp-id="row.1">
+        <ion-col col-2="" data-comp-id="column.1"></ion-col>
+        <ion-col data-comp-id="column.2" style="text-align: center; padding: 10px 0px;">
+            <div color="contrast" data-comp-id="text.1" ion-text="">
+                <b>1</b>
+                of
+                <b>2</b>
+                expenses</div>
+        </ion-col>
+        <ion-col col-2="" data-comp-id="column.3" style="text-align: center;">
+            <ion-icon class="ion-md-arrow-dropright" color="contrast" data-comp-id="icon.1"
+                style="font-size: 24px;"></ion-icon>
+        </ion-col>
+    </ion-row>
+    <ion-list class="list-container-light" data-comp-id="list.1" no-lines=""
+        style="margin: 10px;">
+        <ion-list-header color="white" data-comp-id="list-header.1">
+            <ion-row data-comp-id="row.2">
+                <ion-col data-comp-id="column.4">
+                    <img data-comp-id="img.1" src="assets/images/expensify.png" style="width: 44px;"></ion-col>
+                <ion-col data-comp-id="column.5" style="text-align: right;">
+                    <div [innerHTML]="data.totalAmount" color="primary" data-comp-id="text.2"
+                        ion-text="" style="font-size: 22px;"></div>
+                </ion-col>
+            </ion-row>
+            <ion-row data-comp-id="row.3">
+                <ion-col data-comp-id="column.6">
+                    <div [innerHTML]="data.id" color="dark" data-comp-id="text.3" ion-text=""
+                        style="font-size: 16px;">Some text</div>
+                    <div [innerHTML]="data.reporter" data-comp-id="text.4" ion-text=""
+                        style="font-size: 20px;"></div>
+                    <div [innerHTML]="data.description" color="dark" data-comp-id="text.5"
+                        ion-text="" style="font-size: 16px;"></div>
+                </ion-col>
+            </ion-row>
+        </ion-list-header>
+        <ion-row class="row-light" data-comp-id="row.4"
+            style="border-bottom: 1px solid rgb(221,221,221); border-top: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.7" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.6" ion-text="">Merchant</div>
+            </ion-col>
+            <ion-col data-comp-id="column.8" style="padding: 10px;">
+                <div [innerHTML]="data.merchant" data-comp-id="text.7" ion-text="">Some text</div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-light" data-comp-id="row.5"
+            style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.9" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.8" ion-text="">Date</div>
+            </ion-col>
+            <ion-col data-comp-id="column.10" style="padding: 10px;">
+                <div [innerHTML]="data.date" data-comp-id="text.9" ion-text=""></div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-light" data-comp-id="row.6"
+            style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.11" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.10" ion-text="">Total</div>
+            </ion-col>
+            <ion-col data-comp-id="column.12" style="padding: 10px;">
+                <div [innerHTML]="data.totalAmount" data-comp-id="text.11" ion-text=""></div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-light" data-comp-id="row.7"
+            style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.13" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.12" ion-text="">Category</div>
+            </ion-col>
+            <ion-col data-comp-id="column.14" style="padding: 10px;">
+                <div [innerHTML]="data.category" data-comp-id="text.13" ion-text="">Some text</div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-light" data-comp-id="row.8"
+            style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.15" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.14" ion-text="">Customer / Job</div>
+            </ion-col>
+            <ion-col data-comp-id="column.16" style="padding: 10px;">
+                <div [innerHTML]="data.customerJob" data-comp-id="text.15" ion-text=""></div>
+            </ion-col>
+        </ion-row>
+        <ion-item color="light" data-comp-id="textarea.1">
+            <ion-label stacked="">Comment</ion-label>
+            <ion-textarea [(ngModel)]="data.comment" placeholder="Type here..." rows="5"></ion-textarea>
+        </ion-item>
+        <ion-item-divider color="balanced" data-comp-id="item.1" detail-none=""
+            style="border-top: 1px solid rgb(221,221,221); border-bottom: 1px solid rgb(221,221,221);">
+            <div data-comp-id="text.16" ion-text="">Receipt Thumbnails</div>
+        </ion-item-divider>
+        <ion-row *ngFor="let item of data.attachments;let i = index"
+            data-comp-id="row.9" style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col data-comp-id="column.17"><img data-comp-id="img.2" src="assets/images/default.png"
+                style="float: left; margin: 5px 10px 10px 0px; border: 1px solid rgb(221,221,221)  ">
+                <div [innerHTML]="item.total" color="dark" data-comp-id="text.17" ion-text=""
+                    style="line-height: 24px;"></div>
+                <div [innerHTML]="item.date" data-comp-id="text.18" ion-text=""
+                    style="line-height: 24px;">Some text</div>
+                <div [innerHTML]="item.merchant" data-comp-id="text.19" ion-text=""
+                    style="line-height: 24px; font-size: 16px;">Some text</div>
+            </ion-col>
+        </ion-row>
+        <ion-item color="light" data-comp-id="item.2" detail-none="" ngClass="comment"
+            style="border: 1px solid rgb(221,221,221);"></ion-item>
+    </ion-list>
+    <ion-list class="list-container-light" data-comp-id="list.2" no-lines=""
+        style="margin: 10px;">
+        <ion-item-divider color="balanced" data-comp-id="item.3" detail-none=""
+            style="border-top: 1px solid rgb(221,221,221); border-bottom: 1px solid rgb(221,221,221);">
+            <div color="danger" data-comp-id="text.20" ion-text="">Reject This Expense Only</div>
+        </ion-item-divider>
+        <ion-item data-comp-id="textarea.2">
+            <ion-label stacked="">Enter Comments</ion-label>
+            <ion-textarea [(ngModel)]="data.comments" placeholder="Type here..." rows="5"></ion-textarea>
+        </ion-item>
+        <ion-row data-comp-id="row.10">
+            <ion-col data-comp-id="column.18" style="text-align: center;">
+                <button (click)="action('reject')" block="" color="danger"
+                    data-comp-id="button.3" ion-button="" small="">
+                    <ion-icon class="ion-ios-close" style="font-size: 20px;"></ion-icon>
+                    <span ion-text="">&nbsp;&nbsp;Reject Expense</span>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+</ion-content>

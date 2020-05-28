@@ -1,0 +1,39 @@
+<ion-header data-comp-id="header.1"></ion-header>
+<ion-content class="content-light" data-comp-id="content.1">
+    <div class="container-light" data-comp-id="div.1" style="padding: 20% 10%;">
+        <ion-row data-comp-id="row.1" style="margin: 0 0 0; padding: 0px;">
+            <ion-col data-comp-id="column.1" style="text-align: center;">
+                <button color="danger" data-comp-id="button.1" ion-button="" icon-only="" large=""
+                    style="font-size: 25px; border-radius: 40px;">
+                    <ion-icon class="ion-ios-close-outline" color="light"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-card data-comp-id="card.1"
+            style="margin: -40px 10px 10px 10px; padding: 10px;">
+            <ion-card-content data-comp-id="card-content.1" style="padding: 10px;">
+                <ion-row data-comp-id="row.2">
+                    <ion-col data-comp-id="column.2" style="text-align: center;">
+                        <div color="dark" data-comp-id="text.1" ion-text=""
+                            style="font-size: 18px; margin: 30px 0px 10px;">Enter Reason for Rejection</div>
+                        <ion-item data-comp-id="textarea.1"
+                            style="border-top: 1px solid rgb(221,221,221); border-right: 1px solid rgb(221,221,221); border-bottom: 1px solid rgb(221,221,221); border-left: 1px solid rgb(221,221,221);">
+                            <ion-label stacked=""></ion-label>
+                            <ion-textarea [(ngModel)]="data.reason" placeholder="Type here..." rows="8"></ion-textarea>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row data-comp-id="row.3">
+                    <ion-col data-comp-id="column.3">
+                        <button (click)="action('cancel')" block="" color="dark" data-comp-id="button.1"
+                            ion-button="" small="" style="margin: 10px 0px 25px;"><span>Cancel</span></button>
+                    </ion-col>
+                    <ion-col data-comp-id="column.4">
+                        <button (click)="action('submit')" block="" data-comp-id="button.2"
+                            ion-button="" small="" style="margin: 10px 0px 25px;"><span>Submit</span></button>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

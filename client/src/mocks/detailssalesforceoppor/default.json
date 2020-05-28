@@ -1,0 +1,19 @@
+{
+  "amount": "$25,000.00",
+  "owner": "Trevor Howard",
+  "name": "IT Department",
+  "accountName": "Acme Company",
+  "closedDate": "January 10, 2018",
+  "fiscalQuarter": "1",
+  "fiscalYear": "2018",
+  "forecast": "Probable",
+  "probability": "78%",
+  "stage": "Perception Analysis",
+  "type": "Opportunity",
+  "notes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem",
+  "comments": "",
+  "status": "Pending",
+  "date": "January 10, 2018",
+  "contact": "Janice Conklin",
+  "forecastCategory": "Pipeline"
+}

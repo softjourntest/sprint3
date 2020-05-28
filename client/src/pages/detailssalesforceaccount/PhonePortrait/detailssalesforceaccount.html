@@ -1,0 +1,105 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="contrast" data-comp-id="navbar.1">
+        <ion-buttons data-comp-id="buttons.1" start="">
+            <button (click)="action('back')" data-comp-id="button.1" icon-only=""
+                ion-button="">
+                <ion-icon class="ion-ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title data-comp-id="title.1">
+            <div data-comp-id="text.12" ion-text="">Account Details</div>
+        </ion-title>
+        <ion-buttons data-comp-id="buttons.2" end="">
+            <button data-comp-id="button.2" icon-only="" ion-button="">
+                <ion-icon></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content-contrast" data-comp-id="content.1">
+    <ion-list class="list-container-light" data-comp-id="list.1"
+        style="margin: 10px;">
+        <ion-list-header color="white" data-comp-id="list-header.1">
+            <ion-row data-comp-id="row.1">
+                <ion-col data-comp-id="column.1">
+                    <img data-comp-id="img.1" src="assets/images/salesforce.png"
+                        style="width: 44px;"></ion-col>
+                <ion-col data-comp-id="column.2" style="text-align: right;">
+                    <div [innerHTML]="data.amount" color="primary" data-comp-id="text.1" ion-text=""
+                        style="font-size: 22px;"></div>
+                </ion-col>
+            </ion-row>
+            <ion-row data-comp-id="row.2">
+                <ion-col data-comp-id="column.3">
+                    <div [innerHTML]="data.owner" color="dark" data-comp-id="text.2" ion-text="">Some text</div>
+                    <div [innerHTML]="data.name" data-comp-id="text.3" ion-text=""
+                        style="font-size: 20px; line-height: 30px;"></div>
+                    <div [innerHTML]="data.status" color="dark" data-comp-id="text.4" ion-text=""
+                        style="line-height: 24px;"></div>
+                </ion-col>
+            </ion-row>
+        </ion-list-header>
+        <ion-row class="row-light" data-comp-id="row.3"
+            style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.4" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.5" ion-text="">Owner</div>
+            </ion-col>
+            <ion-col data-comp-id="column.5" style="padding: 10px;">
+                <div [innerHTML]="data.owner" data-comp-id="text.6" ion-text="">Some text</div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-light" data-comp-id="row.4"
+            style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.6" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.7" ion-text="">Account Name</div>
+            </ion-col>
+            <ion-col data-comp-id="column.7" style="padding: 10px;">
+                <div [innerHTML]="data.accountName" data-comp-id="text.8" ion-text="">Some text</div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-light" data-comp-id="row.5"
+            style="border-bottom: 1px solid rgb(221,221,221);">
+            <ion-col col-4="" data-comp-id="column.8" style="padding: 10px;">
+                <div color="dark" data-comp-id="text.9" ion-text="">Type</div>
+            </ion-col>
+            <ion-col data-comp-id="column.9" style="padding: 10px;">
+                <div data-comp-id="text.10" ion-text="">Some text</div>
+            </ion-col>
+        </ion-row>
+        <ion-item color="light" data-comp-id="textarea.1">
+            <ion-label stacked="">Notes</ion-label>
+            <ion-textarea [(ngModel)]="data.notes" [readonly]="True"
+                placeholder="Type here..." rows="6"></ion-textarea>
+        </ion-item>
+        <ion-item-divider color="calm" data-comp-id="item.1" detail-none=""
+            style="border-top: 1px solid rgb(221,221,221); border-bottom: 1px solid rgb(221,221,221);">
+            <div data-comp-id="text.11" ion-text="">Comments</div>
+        </ion-item-divider>
+        <ion-item data-comp-id="textarea.2">
+            <ion-label stacked=""></ion-label>
+            <ion-textarea [(ngModel)]="data.comments" placeholder="Type here..." rows="6"></ion-textarea>
+        </ion-item>
+        <ion-item color="light" data-comp-id="item.2" detail-none="" ngClass="comment"></ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer data-comp-id="footer.1">
+    <ion-row data-comp-id="row.6" style="padding: 0 8px 0 8px;">
+        <ion-col data-comp-id="column.10">
+            <button (click)="action('reject')" block="" color="danger"
+                data-comp-id="button.3" ion-button="" outline="" small=""
+                style="background-color: #fff;">
+                <ion-icon class="ion-ios-close" style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                <span ion-text="">Reject</span>
+            </button>
+        </ion-col>
+        <ion-col data-comp-id="column.11">
+            <button (click)="action('approve')" block="" color="good"
+                data-comp-id="button.4" ion-button="" outline="" small=""
+                style="background-color: #fff;">
+                <ion-icon class="ion-ios-checkmark-outline" color="good"
+                    style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                <span ion-text="">Approve</span>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

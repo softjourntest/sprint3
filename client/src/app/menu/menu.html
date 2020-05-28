@@ -1,0 +1,38 @@
+<ion-menu [content]="content" id="menu-component">
+    <ion-header data-comp-id="header.1">
+        <ion-toolbar data-comp-id="toolbar.1" menuClose="" style="padding:0px;">
+            <div class="container-contrast" data-comp-id="div.1" style="padding: 40px;"
+                text-center="">
+                <ion-icon class="ion-md-checkmark-circle-outline" color="highlight"
+                    data-comp-id="icon.1" style="font-size: 48px;"></ion-icon>
+                <div color="light" data-comp-id="text.1" ion-text=""
+                    style="font-size: 18px; margin: 20px 0 0 0;">Approvals</div>
+            </div>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content data-comp-id="content.1" menuClose="">
+        <ion-list data-comp-id="list.1">
+            <ion-item (click)="action('home')" data-comp-id="item.1">
+                <ion-icon class="ion-ios-home-outline" color="primary" data-comp-id="icon.2"
+                    item-start="" style="font-size: 28px;"></ion-icon>
+                <div color="primary" data-comp-id="text.2" ion-text="" style="font-size: 16px;">Home</div>
+            </ion-item>
+            <ion-item (click)="go('appsettings')" data-comp-id="item.2" menuClose="">
+                <ion-icon class="ion-ios-settings-outline" color="primary" data-comp-id="icon.3"
+                    item-start="" style="font-size: 28px;"></ion-icon>
+                <div color="primary" data-comp-id="text.3" ion-text="" style="font-size: 16px;">Settings</div>
+            </ion-item>
+            <ion-item (click)="action('home')" data-comp-id="item.3" menuClose="">
+                <ion-icon class="ion-ios-information-circle-outline" color="primary"
+                    data-comp-id="icon.4" item-start="" style="font-size: 28px;"></ion-icon>
+                <div color="primary" data-comp-id="text.4" ion-text="" style="font-size: 16px;">About</div>
+            </ion-item>
+            <ion-item (click)="logout()" data-comp-id="item.4" menuClose="">
+                <ion-icon class="ion-ios-exit-outline" color="primary" data-comp-id="icon.5"
+                    item-start="" style="font-size: 28px;"></ion-icon>
+                <div color="primary" data-comp-id="text.5" ion-text="" style="font-size: 16px;">Logout</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #content=""></ion-nav>

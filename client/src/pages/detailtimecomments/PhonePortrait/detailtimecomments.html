@@ -1,0 +1,117 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="contrast" data-comp-id="navbar.1">
+        <ion-buttons data-comp-id="buttons.1" left="">
+            <button (click)="action('back')" data-comp-id="button.1" ion-button="" icon-only=""
+                style="font-size: 24px;">
+                <ion-icon class="ion-ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title data-comp-id="title.1" text-center="">
+            <div data-comp-id="text.14" ion-text="">Time Comments</div>
+        </ion-title>
+        <ion-buttons data-comp-id="buttons.2" right="">
+            <button (click)="go('home')" data-comp-id="button.2" ion-button="" icon-only=""
+                style="font-size: 24px;">
+                <ion-icon></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content-contrast" data-comp-id="content.1">
+    <ion-list class="list-container-light" data-comp-id="list.1"
+        style="margin: 10px; padding: 0 0 20px 0;">
+        <ion-list-header color="white" data-comp-id="list-header.1">
+            <ion-row data-comp-id="row.1">
+                <ion-col data-comp-id="column.1">
+                    <img data-comp-id="img.1" src="assets/images/peoplesoft.png"
+                        style="width: 100px;">
+                </ion-col>
+                <ion-col data-comp-id="column.2" style="text-align: right;">
+                    <div color="primary" data-comp-id="text.1" ion-text="" style="font-size: 22px;"></div>
+                </ion-col>
+            </ion-row>
+            <ion-row data-comp-id="row.2">
+                <ion-col data-comp-id="column.3">
+                    <div data-comp-id="text.2" ion-text="" style="font-size: 20px;"></div>
+                </ion-col>
+            </ion-row>
+        </ion-list-header>
+        <ion-row class="row-light" data-comp-id="row.3"
+            style="border-bottom: 1px solid #009bde;">
+            <ion-col data-comp-id="column.4" style="text-align: center; padding: 5px 10px;">
+                <ion-icon (click)="go('TimeComments')" class="fa fa-comment-o" color="primary"
+                    data-comp-id="icon.1" style="font-size: 28px; float: left; margin: 0px 5px;"></ion-icon>
+                <div [innerHTML]="data.date" color="dark" data-comp-id="text.3" ion-text=""
+                    style="float: none; font-size: 16px; margin: 5px;"></div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-primary" data-comp-id="row.4" style="padding: 0px 2px;">
+            <ion-col data-comp-id="column.5" style="text-align: left; padding: 15px 10px;">
+                <ion-icon class="fa fa-angle-double-left" color="white" data-comp-id="icon.2"
+                    style="margin: 0 1px 2px; font-size: 28px;"></ion-icon>
+            </ion-col>
+            <ion-col class="column-light" data-comp-id="column.6"
+                style="text-align: center; border-top: 0px;">
+                <div color="contrast" data-comp-id="text.4" ion-text=""
+                    style="font-size: 14px; float: none; font-weight: 300;">Mon</div>
+                <div color="contrast" data-comp-id="text.5" ion-text=""
+                    style="font-size: 22px; float: none; font-weight: normal;">30</div>
+            </ion-col>
+            <ion-col data-comp-id="column.7" style="text-align: center;">
+                <div color="light" data-comp-id="text.6" ion-text=""
+                    style="font-size: 14px; float: none; font-weight: 300;">Tue</div>
+                <div color="light" data-comp-id="text.7" ion-text=""
+                    style="font-size: 22px; float: none; font-weight: normal;">31</div>
+            </ion-col>
+            <ion-col data-comp-id="column.8" style="text-align: center;">
+                <div color="light" data-comp-id="text.8" ion-text=""
+                    style="font-size: 14px; float: none; font-weight: 300;">Wed</div>
+                <div color="light" data-comp-id="text.9" ion-text=""
+                    style="font-size: 22px; float: none; font-weight: normal;">01</div>
+            </ion-col>
+            <ion-col data-comp-id="column.9" style="text-align: center;">
+                <div color="light" data-comp-id="text.10" ion-text=""
+                    style="font-size: 14px; float: none; font-weight: 300;">Thur</div>
+                <div color="light" data-comp-id="text.11" ion-text=""
+                    style="font-size: 22px; float: none; font-weight: normal;">02</div>
+            </ion-col>
+            <ion-col data-comp-id="column.10" style="text-align: center;">
+                <div color="light" data-comp-id="text.12" ion-text=""
+                    style="font-size: 14px; float: none; font-weight: 300;">Fri</div>
+                <div color="light" data-comp-id="text.13" ion-text=""
+                    style="font-size: 22px; float: none; font-weight: normal;">03</div>
+            </ion-col>
+            <ion-col data-comp-id="column.11" style="text-align: right; padding: 15px 10px;">
+                <ion-icon class="fa fa-angle-double-right" color="white" data-comp-id="icon.3"
+                    style="margin: 0 1px 2px; font-size: 28px;"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-card color="light" data-comp-id="card.1"
+            style="padding: 5px; margin: 12px 12px 12px 12px;">
+            <ion-item color="light" data-comp-id="textarea.1">
+                <ion-label stacked="">Comments sldkfj sldfkj</ion-label>
+                <ion-textarea [(ngModel)]="data.comments" [readonly]="true"
+                    placeholder="Type here..." rows="15"></ion-textarea>
+            </ion-item>
+        </ion-card>
+    </ion-list>
+</ion-content>
+<ion-footer data-comp-id="footer.1" style="background-color: #ffffff;">
+    <ion-row data-comp-id="row.5" style="padding: 10px;">
+        <ion-col data-comp-id="column.12">
+            <button block="" color="danger" data-comp-id="button.3"
+                ion-button="" outline="" small="" style="background-color: #fff;">
+                <ion-icon class="ion-ios-close" color="danger"
+                    style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                <span ion-text="">Reject</span>
+            </button>
+        </ion-col>
+        <ion-col data-comp-id="column.13">
+            <button block="" color="good" data-comp-id="button.4"
+                ion-button="" outline="" small="">
+                <ion-icon class="ion-ios-checkmark" style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                <span ion-text="">Approve</span>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

@@ -1,0 +1,17 @@
+export { mock_appsettings as appsettings } from './appsettings/index';
+export { mock_commentsmodal as commentsmodal } from './commentsmodal/index';
+export { mock_detailsexpensify1 as detailsexpensify1 } from './detailsexpensify1/index';
+export { mock_detailsexpensify2 as detailsexpensify2 } from './detailsexpensify2/index';
+export { mock_detailssalesforceaccount as detailssalesforceaccount } from './detailssalesforceaccount/index';
+export { mock_detailssalesforceoppor as detailssalesforceoppor } from './detailssalesforceoppor/index';
+export { mock_detailssap as detailssap } from './detailssap/index';
+export { mock_detailstimeview as detailstimeview } from './detailstimeview/index';
+export { mock_detailtimecomments as detailtimecomments } from './detailtimecomments/index';
+export { mock_home as home } from './home/index';
+export { mock_login as login } from './login/index';
+export { mock_loginexpensify as loginexpensify } from './loginexpensify/index';
+export { mock_loginpeoplesoft as loginpeoplesoft } from './loginpeoplesoft/index';
+export { mock_loginsalesforce as loginsalesforce } from './loginsalesforce/index';
+export { mock_loginsap as loginsap } from './loginsap/index';
+export { mock_menu as menu } from './menu/index';
+export { mock_settings as settings } from './settings/index';

@@ -1,0 +1,148 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="contrast" data-comp-id="navbar.1">
+        <ion-buttons data-comp-id="buttons.1" start="">
+            <button data-comp-id="button.1" icon-only="" ion-button="" menuToggle="">
+                <ion-icon class="ion-ios-menu" name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title data-comp-id="title.1">
+            <div data-comp-id="text.17" ion-text="">Settings</div>
+        </ion-title>
+        <ion-buttons data-comp-id="buttons.2" end="">
+            <button (click)="action('home')" data-comp-id="button.2" icon-only=""
+                ion-button="">
+                <ion-icon class="ion-ios-home"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content-contrast" data-comp-id="content.1"
+    style="background-repeat: repeat-y; background-size: 100%;">
+    <ion-card (click)="action('expensify.login')" data-comp-id="card.1"
+        style="padding: 5px;">
+        <ion-row data-comp-id="row.1" style="margin: 5px 5px;">
+            <ion-col data-comp-id="column.1" style="padding: 5px 10px;">
+                <img data-comp-id="img.1" src="assets/images/expensify.png"
+                    style="width: 50px; margin: 0 10px 5px 0px;">
+                <div color="dark" data-comp-id="text.1" ion-text="" style="font-size: 18px;">Expensify</div>
+            </ion-col>
+            <ion-col *ngIf="!data.expensify.connected && !data.expensify.errorMessage"
+                col-4="" data-comp-id="column.2" style="text-align: right;">
+                <ion-icon class="ion-ios-arrow-dropright-circle-outline" color="primary"
+                    data-comp-id="icon.1" style="font-size: 30px;"></ion-icon>
+                <div color="primary" data-comp-id="text.2" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connect</div>
+            </ion-col>
+            <ion-col *ngIf="data.expensify.errorMessage" col-4="" data-comp-id="column.3"
+                style="text-align: right;">
+                <ion-icon class="ion-ios-alert" color="danger" data-comp-id="icon.2"
+                    style="font-size: 30px;"></ion-icon>
+                <div [innerHTML]="data.sapPo.errorMessage" color="danger" data-comp-id="text.3"
+                    ion-text="" style="margin: 10px 0px 0 0;"></div>
+            </ion-col>
+            <ion-col *ngIf="data.expensify.connected" col-4="" data-comp-id="column.4"
+                style="text-align: right;">
+                <ion-icon class="ion-ios-checkmark-circle" color="good" data-comp-id="icon.3"
+                    style="font-size: 30px;"></ion-icon>
+                <div color="good" data-comp-id="text.4" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connected</div>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card (click)="action('sapPo.login')" data-comp-id="card.2"
+        style="padding: 5px;">
+        <ion-row data-comp-id="row.2" style="margin: 5px 5px; border-bottom: 0px;">
+            <ion-col data-comp-id="column.5" style="padding: 5px 10px;">
+                <img data-comp-id="img.2" src="assets/images/SAP-Logo.png"
+                    style="width: 70px; margin: 0 10px 5px 0px;">
+                <div color="dark" data-comp-id="text.5" ion-text="" style="font-size: 18px;">SAP Purchase Orders</div>
+            </ion-col>
+            <ion-col *ngIf="data.sapPo.errorMessage" col-4="" data-comp-id="column.6"
+                style="text-align: right;">
+                <ion-icon class="ion-ios-alert" color="danger" data-comp-id="icon.4"
+                    style="font-size: 30px;"></ion-icon>
+                <div [innerHTML]="data.sapPo.errorMessage" color="danger" data-comp-id="text.6"
+                    ion-text="" style="margin: 10px 0px 0 0;"></div>
+            </ion-col>
+            <ion-col *ngIf="!data.sapPo.connected && !data.sapPo.errorMessage" col-4=""
+                data-comp-id="column.7" style="text-align: right;">
+                <ion-icon class="ion-ios-arrow-dropright-circle-outline" color="primary"
+                    data-comp-id="icon.5" style="font-size: 30px;"></ion-icon>
+                <div color="primary" data-comp-id="text.7" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connect</div>
+            </ion-col>
+            <ion-col *ngIf="data.sapPo.connected && !data.sapPo.errorMessage" col-4=""
+                data-comp-id="column.8" style="text-align: right;">
+                <ion-icon class="ion-ios-checkmark-circle" color="good" data-comp-id="icon.6"
+                    style="font-size: 30px;"></ion-icon>
+                <div color="good" data-comp-id="text.8" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connected</div>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card (click)="action('sapOpp.login')" data-comp-id="card.3"
+        style="padding: 5px;">
+        <ion-row data-comp-id="row.3" style="margin: 5px 5px;">
+            <ion-col data-comp-id="column.9" style="padding: 5px 10px;">
+                <img data-comp-id="img.3" src="assets/images/salesforce.png"
+                    style="width: 60px; margin: 0 10px 5px 0px;">
+                <div color="dark" data-comp-id="text.9" ion-text="" style="font-size: 18px;">Salesforce Opportunities</div>
+            </ion-col>
+            <ion-col *ngIf="!data.sapOpp.connected && !data.sapOpp.errorMessage" col-4=""
+                data-comp-id="column.10" style="text-align: right;">
+                <ion-icon class="ion-ios-arrow-dropright-circle-outline" color="primary"
+                    data-comp-id="icon.7" style="font-size: 30px;"></ion-icon>
+                <div color="primary" data-comp-id="text.10" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connect</div>
+            </ion-col>
+            <ion-col *ngIf="data.sapOpp.connected && !data.sapOpp.errorMessage" col-4=""
+                data-comp-id="column.11" style="text-align: right;">
+                <ion-icon class="ion-ios-checkmark-circle" color="good" data-comp-id="icon.8"
+                    style="font-size: 30px;"></ion-icon>
+                <div color="good" data-comp-id="text.11" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connected</div>
+            </ion-col>
+            <ion-col *ngIf="data.sapOpp.errorMessage" col-4="" data-comp-id="column.12"
+                style="text-align: right;">
+                <ion-icon class="ion-ios-alert" color="danger" data-comp-id="icon.9"
+                    style="font-size: 30px;"></ion-icon>
+                <div [innerHTML]="data.sapPo.errorMessage" color="danger" data-comp-id="text.12"
+                    ion-text="" style="margin: 10px 0px 0 0;"></div>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card (click)="action('peoplesoft.login')" data-comp-id="card.4"
+        style="padding: 5px;">
+        <ion-row data-comp-id="row.4" style="margin: 5px 5px;">
+            <ion-col data-comp-id="column.13" style="padding: 5px 10px;">
+                <img data-comp-id="img.4" src="assets/images/peoplesoft.png"
+                    style="width: 120px; margin: 0 10px 5px 0px;">
+                <div color="dark" data-comp-id="text.13" ion-text="" style="font-size: 18px;">Oracle Time Cards</div>
+            </ion-col>
+            <ion-col *ngIf="data.peoplesoft.connected && !data.peoplesoft.errorMessage"
+                col-4="" data-comp-id="column.14" style="text-align: right;">
+                <ion-icon class="ion-ios-checkmark-circle" color="good" data-comp-id="icon.10"
+                    style="font-size: 30px;"></ion-icon>
+                <div color="good" data-comp-id="text.14" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connected</div>
+            </ion-col>
+            <ion-col *ngIf="!data.peoplesoft.connected && !data.peoplesoft.errorMessage"
+                col-4="" data-comp-id="column.15" style="text-align: right;">
+                <ion-icon class="ion-ios-arrow-dropright-circle-outline" color="primary"
+                    data-comp-id="icon.11" style="font-size: 30px;"></ion-icon>
+                <div color="primary" data-comp-id="text.15" ion-text=""
+                    style="margin: 10px 0px 0 0;">Connect</div>
+            </ion-col>
+            <ion-col *ngIf="data.peoplesoft.errorMessage" col-4="" data-comp-id="column.16"
+                style="text-align: right;">
+                <ion-icon class="ion-ios-alert" color="danger" data-comp-id="icon.12"
+                    style="font-size: 30px;"></ion-icon>
+                <div [innerHTML]="data.peoplesoft.errorMessage" color="danger"
+                    data-comp-id="text.16" ion-text="" style="margin: 10px 0px 0 0;"></div>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>
+<ion-footer data-comp-id="footer.1">
+    <ion-row data-comp-id="row.5"></ion-row>
+</ion-footer>

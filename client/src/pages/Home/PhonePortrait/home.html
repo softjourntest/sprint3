@@ -1,0 +1,325 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="contrast" data-comp-id="navbar.1">
+        <ion-buttons data-comp-id="buttons.1" start>
+            <button data-comp-id="button.1" icon-only ion-button menuToggle>
+                <ion-icon class="ion-ios-menu" name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title data-comp-id="title.1">
+            <div data-comp-id="text.1" ion-text>My Approvals</div>
+        </ion-title>
+        <ion-buttons data-comp-id="buttons.2" end></ion-buttons>
+    </ion-navbar>
+    <ion-toolbar color="contrast" data-comp-id="toolbar.1">
+        <ion-title data-comp-id="title.2">
+            <span ion-text></span>
+        </ion-title>
+        <div data-comp-id="div.1" style="padding: 5px;">
+            <ion-item color="calm" data-comp-id="select.1">
+                <ion-label>Select</ion-label>
+                <ion-select (ionChange)="filterSelect($event)"
+                    [(ngModel)]="data.sortBy.selected" [selectOptions]="{cssClass: 'select-full'}"
+                    interface="alert">
+                    <ion-option *ngFor="let item of data.sortBy.options" [innerHTML]="item.label"
+                        [value]="item.value" data-comp-id="option.1"></ion-option>
+                </ion-select>
+            </ion-item>
+        </div>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="content-contrast" data-comp-id="content.1">
+    <ion-list data-comp-id="list.1" style="margin: 2px 5px;">
+        <ion-card (click)="action('approvals[item].details', [i])"
+            *ngFor="let item of data.approvals;let i = index" [hidden]="item.isFiltered"
+            data-comp-id="card.1">
+            <ion-item *ngIf="item.$source === 'salesforce'" data-comp-id="item.1"
+                detail-none ngClass="approval-item" no-lines
+                style="margin: 0px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); padding: 8px 0 0 0;">
+                <div data-comp-id="div.2">
+                    <ion-row data-comp-id="row.1" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.1">
+                            <img [src]="item.salesforce.imagePath" data-comp-id="img.1" style="width: 50px;">
+                        </ion-col>
+                        <ion-col data-comp-id="column.2" style="text-align: right; padding: 5px 0px;">
+                            <div color="primary" data-comp-id="text.2" ion-text style="font-size: 24px;">
+                                <span style="font-size: 16px; margin-right: 4px">{{item.salesforce.dataPrefix}}</span>{{item.salesforce.amount}}</div>
+                        </ion-col>
+                        <ion-col *ngIf="item.isNew" data-comp-id="column.3"
+                            style="text-align: right; min-width: 28px; max-width: 28px; padding: 0px 5px;">
+                            <ion-badge color="secondary" data-comp-id="badge.1" item-start>!</ion-badge>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.2" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.4">
+                            <div [innerHTML]="item.salesforce.vendor" data-comp-id="text.3" ion-text
+                                style="line-height: 24px;"></div>
+                            <div [innerHTML]="item.salesforce.date" color="coal" data-comp-id="text.4"
+                                ion-text style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.3" style="padding: 2px 8px 4px 8px;">
+                        <ion-col data-comp-id="column.5">
+                            <div [innerHTML]="item.salesforce.employee" color="dark" data-comp-id="text.5"
+                                ion-text style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-row *ngIf="!item.resolved" class="row-light" data-comp-id="row.4"
+                    style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.6">
+                        <button (click)="action('approvals[item].reject', [i])" block color="danger"
+                            data-comp-id="button.2" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-close" style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Reject</span>
+                        </button>
+                    </ion-col>
+                    <ion-col data-comp-id="column.7">
+                        <button (click)="action('approvals[item].approve', [i])" block color="good"
+                            data-comp-id="button.3" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-checkmark-outline" color="good"
+                                style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Approve</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.approved" class="row-light"
+                    data-comp-id="row.5" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.8">
+                        <a block color="good" data-comp-id="button.4" ion-button small>
+                            <ion-icon class="ion-ios-checkmark-circle"></ion-icon>
+                            <span ion-text>Approved</span>
+                        </a>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.rejected" class="row-light"
+                    data-comp-id="row.6" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.9">
+                        <button block color="danger" data-comp-id="button.5" ion-button small>
+                            <ion-icon class="ion-ios-close-circle"></ion-icon>
+                            <span ion-text>Rejected</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item *ngIf="item.$source === 'sap'" data-comp-id="item.2" detail-none
+                ngClass="approval-item" no-lines
+                style="margin: 0px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); padding: 8px 0 0 0;">
+                <div data-comp-id="div.3">
+                    <ion-row data-comp-id="row.7" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.10">
+                            <img [src]="item.sap.imagePath" data-comp-id="img.2" style="width: 50px;">
+                        </ion-col>
+                        <ion-col data-comp-id="column.11" style="text-align: right; padding: 5px 0px;">
+                            <div color="primary" data-comp-id="text.6" ion-text style="font-size: 24px;">
+                                <span style="font-size: 16px; margin-right: 4px">{{item.sap.dataPrefix}}</span>{{item.sap.amount}}</div>
+                        </ion-col>
+                        <ion-col *ngIf="item.isNew" data-comp-id="column.12"
+                            style="text-align: right; min-width: 28px; max-width: 28px; padding: 0px 5px;">
+                            <ion-badge color="secondary" data-comp-id="badge.2" item-start>!</ion-badge>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.8" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.13">
+                            <div [innerHTML]="item.sap.expenseItem" data-comp-id="text.7" ion-text
+                                style="line-height: 24px;"></div>
+                            <div [innerHTML]="item.sap.date" color="coal" data-comp-id="text.8" ion-text
+                                style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.9" style="padding: 2px 8px 4px 8px;">
+                        <ion-col data-comp-id="column.14">
+                            <div [innerHTML]="item.sap.employee" color="dark" data-comp-id="text.9" ion-text
+                                style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-row *ngIf="!item.resolved" class="row-light" data-comp-id="row.10"
+                    style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.15">
+                        <button (click)="action('approvals[item].reject', [i])" block color="danger"
+                            data-comp-id="button.6" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-close" style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Reject</span>
+                        </button>
+                    </ion-col>
+                    <ion-col data-comp-id="column.16">
+                        <button (click)="action('approvals[item].approve', [i])" block color="good"
+                            data-comp-id="button.7" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-checkmark-outline" color="good"
+                                style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Approve</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.approved" class="row-light"
+                    data-comp-id="row.11" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.17">
+                        <a block color="good" data-comp-id="button.8" ion-button small>
+                            <ion-icon class="ion-ios-checkmark-circle"></ion-icon>
+                            <span ion-text>Approved</span>
+                        </a>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.rejected" class="row-light"
+                    data-comp-id="row.12" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.18">
+                        <button block color="danger" data-comp-id="button.9" ion-button small>
+                            <ion-icon class="ion-ios-close-circle"></ion-icon>
+                            <span ion-text>Rejected</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item *ngIf="item.$source === 'expensify'" data-comp-id="item.3" detail-none
+                ngClass="approval-item" no-lines
+                style="margin: 0px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); padding: 8px 0 0 0;">
+                <div data-comp-id="div.4">
+                    <ion-row data-comp-id="row.13" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.19">
+                            <img [src]="item.expensify.imagePath" data-comp-id="img.3" style="width: 50px;">
+                        </ion-col>
+                        <ion-col data-comp-id="column.20" style="text-align: right; padding: 5px 0px;">
+                            <div color="primary" data-comp-id="text.10" ion-text style="font-size: 24px;">
+                                <span style="font-size: 16px; margin-right: 4px">{{item.expensify.dataPrefix}}</span>{{item.expensify.amount}}</div>
+                        </ion-col>
+                        <ion-col *ngIf="item.isNew" data-comp-id="column.21"
+                            style="text-align: right; min-width: 28px; max-width: 28px; padding: 0px 5px;">
+                            <ion-badge color="secondary" data-comp-id="badge.3" item-start>!</ion-badge>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.14" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.22">
+                            <div [innerHTML]="item.expensify.expenseItem" data-comp-id="text.11" ion-text
+                                style="line-height: 24px;"></div>
+                            <div [innerHTML]="item.expensify.date" color="coal" data-comp-id="text.12"
+                                ion-text style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.15" style="padding: 2px 8px 4px 8px;">
+                        <ion-col data-comp-id="column.23">
+                            <div [innerHTML]="item.expensify.employee" color="dark" data-comp-id="text.13"
+                                ion-text style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-row *ngIf="!item.resolved" class="row-light" data-comp-id="row.16"
+                    style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.24">
+                        <button (click)="action('approvals[item].reject', [i])" block color="danger"
+                            data-comp-id="button.10" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-close" style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Reject</span>
+                        </button>
+                    </ion-col>
+                    <ion-col data-comp-id="column.25">
+                        <button (click)="action('approvals[item].approve', [i])" block color="good"
+                            data-comp-id="button.11" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-checkmark-outline" color="good"
+                                style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Approve</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.approved" class="row-light"
+                    data-comp-id="row.17" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.26">
+                        <a block color="good" data-comp-id="button.12" ion-button small>
+                            <ion-icon class="ion-ios-checkmark-circle"></ion-icon>
+                            <span ion-text>Approved</span>
+                        </a>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.rejected" class="row-light"
+                    data-comp-id="row.18" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.27">
+                        <button block color="danger" data-comp-id="button.13" ion-button small>
+                            <ion-icon class="ion-ios-close-circle"></ion-icon>
+                            <span ion-text>Rejected</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item *ngIf="item.$source === 'peoplesoft'" data-comp-id="item.4"
+                detail-none ngClass="approval-item" no-lines
+                style="margin: 0px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); padding: 8px 0 0 0;">
+                <div data-comp-id="div.5">
+                    <ion-row data-comp-id="row.19" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.28">
+                            <img [src]="item.peoplesoft.imagePath" data-comp-id="img.4" style="width: 50px;">
+                        </ion-col>
+                        <ion-col data-comp-id="column.29" style="text-align: right; padding: 5px 0px;">
+                            <div color="primary" data-comp-id="text.14" ion-text style="font-size: 24px;">
+                                <span style="font-size: 16px; margin-right: 4px">{{item.peoplesoft.dataPrefix}}</span>{{item.peoplesoft.amount}}</div>
+                        </ion-col>
+                        <ion-col *ngIf="item.isNew" data-comp-id="column.30"
+                            style="text-align: right; min-width: 28px; max-width: 28px; padding: 0px 5px;">
+                            <ion-badge color="secondary" data-comp-id="badge.4" item-start>!</ion-badge>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.20" style="padding: 0 8px 0 8px;">
+                        <ion-col data-comp-id="column.31">
+                            <div [innerHTML]="item.peoplesoft.project" data-comp-id="text.15" ion-text
+                                style="line-height: 24px;"></div>
+                            <div [innerHTML]="item.peoplesoft.dates" color="coal" data-comp-id="text.16"
+                                ion-text style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.21" style="padding: 2px 8px 4px 8px;">
+                        <ion-col data-comp-id="column.32">
+                            <div [innerHTML]="item.peoplesoft.employee" color="dark" data-comp-id="text.17"
+                                ion-text style="font-size: 16px;"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-row *ngIf="!item.resolved" class="row-light" data-comp-id="row.22"
+                    style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.33">
+                        <button (click)="action('approvals[item].reject', [i])" block color="danger"
+                            data-comp-id="button.14" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-close" style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Reject</span>
+                        </button>
+                    </ion-col>
+                    <ion-col data-comp-id="column.34">
+                        <button (click)="action('approvals[item].approve', [i])" block color="good"
+                            data-comp-id="button.15" ion-button outline small stop-click-propagation
+                            style="background-color: #fff;">
+                            <ion-icon class="ion-ios-checkmark-outline" color="good"
+                                style="font-size: 24px; padding: 0px 10px;"></ion-icon>
+                            <span ion-text>Approve</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.approved" class="row-light"
+                    data-comp-id="row.23" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.35">
+                        <a block color="good" data-comp-id="button.16" ion-button small>
+                            <ion-icon class="ion-ios-checkmark-circle"></ion-icon>
+                            <span ion-text>Approved</span>
+                        </a>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="item.resolved && item.rejected" class="row-light"
+                    data-comp-id="row.24" style="padding: 0 8px 0 8px;">
+                    <ion-col data-comp-id="column.36">
+                        <button block color="danger" data-comp-id="button.17" ion-button small>
+                            <ion-icon class="ion-ios-close-circle"></ion-icon>
+                            <span ion-text>Rejected</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card>
+    </ion-list>
+    <touchid-save [authRequest]="appService ? appService.getAuthRequest() : null"
+        data-comp-id="touchid-save.1"
+        message="Would you like to use {{getBiometricAuthType()}} to login?"
+        title="{{getBiometricAuthType()}} Available"></touchid-save>
+</ion-content>

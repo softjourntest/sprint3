@@ -1,0 +1,1094 @@
+{
+  "settings": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "expensify": {
+        "type": "object",
+        "properties": {
+          "login": {
+            "type": "action"
+          },
+          "errorMessage": {
+            "type": "string"
+          },
+          "connected": {
+            "type": "boolean"
+          }
+        }
+      },
+      "sapPo": {
+        "type": "object",
+        "properties": {
+          "login": {
+            "type": "action"
+          },
+          "errorMessage": {
+            "type": "string",
+            "update": {
+              "type": "none"
+            }
+          },
+          "connected": {
+            "type": "boolean"
+          }
+        }
+      },
+      "sapOpp": {
+        "type": "object",
+        "properties": {
+          "login": {
+            "type": "action"
+          },
+          "errorMessage": {
+            "type": "string"
+          },
+          "connected": {
+            "type": "boolean"
+          }
+        }
+      },
+      "peoplesoft": {
+        "type": "object",
+        "properties": {
+          "login": {
+            "type": "action"
+          },
+          "errorMessage": {
+            "type": "string"
+          },
+          "connected": {
+            "type": "boolean"
+          }
+        }
+      },
+      "home": {
+        "type": "action"
+      }
+    },
+    "id": "settings"
+  },
+  "loginexpensify": {
+    "type": "object",
+    "comment": "Login",
+    "properties": {
+      "username": {
+        "type": "string",
+        "label": "username"
+      },
+      "password": {
+        "type": "string",
+        "label": "password"
+      },
+      "submit": {
+        "type": "action",
+        "parameters": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "back": {
+        "type": "action"
+      },
+      "home": {
+        "type": "action"
+      },
+      "errorMessage": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      }
+    },
+    "id": "loginexpensify"
+  },
+  "loginsalesforce": {
+    "type": "object",
+    "comment": "Login",
+    "properties": {
+      "username": {
+        "type": "string",
+        "label": "username"
+      },
+      "password": {
+        "type": "string",
+        "label": "password"
+      },
+      "submit": {
+        "type": "action",
+        "parameters": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "back": {
+        "type": "action"
+      },
+      "home": {
+        "type": "action"
+      },
+      "errorMessage": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      }
+    },
+    "id": "loginsalesforce"
+  },
+  "detailsexpensify1": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "reject": {
+        "type": "action"
+      },
+      "approve": {
+        "type": "action"
+      },
+      "description": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "status": {
+        "type": "string"
+      },
+      "amount": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "date": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "category": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "customerJob": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "details": {
+        "type": "string"
+      },
+      "reporter": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "historyComments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "comment": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "attachments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "total": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "merchant": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "categoryOne": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "details": {
+              "type": "action"
+            },
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "merchant": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "attachmentsNumber": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "comment": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "comment": {
+        "type": "string"
+      },
+      "postComment": {
+        "type": "action"
+      },
+      "back": {
+        "type": "action"
+      }
+    },
+    "id": "detailsexpensify1"
+  },
+  "detailsexpensify2": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "reject": {
+        "type": "action"
+      },
+      "description": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "status": {
+        "type": "string"
+      },
+      "amount": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "merchant": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "date": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "category": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "customerJob": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "reporter": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "totalAmount": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "comment": {
+        "type": "string"
+      },
+      "attachments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "merchant": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "total": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "back": {
+        "type": "action"
+      },
+      "comments": {
+        "type": "string"
+      }
+    },
+    "id": "detailsexpensify2"
+  },
+  "detailssap": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "back": {
+        "type": "action"
+      },
+      "reject": {
+        "type": "action"
+      },
+      "approve": {
+        "type": "action"
+      },
+      "description": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "reporter": {
+        "type": "string"
+      },
+      "submittedDate": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "commodityCode": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "purchaseType": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "localAccount": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "companyCode": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "currency": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "orderQuanity": {
+        "type": "string"
+      },
+      "unit": {
+        "type": "string"
+      },
+      "price": {
+        "type": "string"
+      },
+      "deliveryDate": {
+        "type": "string"
+      },
+      "location": {
+        "type": "string"
+      },
+      "recipient": {
+        "type": "string"
+      },
+      "vendorNumber": {
+        "type": "string"
+      },
+      "amount": {
+        "type": "string"
+      }
+    },
+    "id": "detailssap"
+  },
+  "loginsap": {
+    "type": "object",
+    "comment": "Login",
+    "properties": {
+      "username": {
+        "type": "string",
+        "label": "username"
+      },
+      "password": {
+        "type": "string",
+        "label": "password"
+      },
+      "submit": {
+        "type": "action",
+        "parameters": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "back": {
+        "type": "action"
+      },
+      "home": {
+        "type": "action"
+      },
+      "errorMessage": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      }
+    },
+    "id": "loginsap"
+  },
+  "detailstimeview": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "back": {
+        "type": "action"
+      },
+      "shownDefaultDays": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "dayOfWeek": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        }
+      },
+      "allDefaultDays": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "dayOfWeek": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "periodEndDate": {
+        "type": "string"
+      },
+      "lastWeekDate": {
+        "type": "string"
+      },
+      "originalDateString": {
+        "type": "string"
+      },
+      "dayTotals": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "weekTotal": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "shownDayTotals": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        }
+      },
+      "home": {
+        "type": "action"
+      },
+      "entries": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "hasComment": {
+              "type": "boolean"
+            },
+            "shownTimes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "time": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "allTimes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "time": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "rowTotal": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "action"
+            },
+            "project": {
+              "type": "string"
+            },
+            "task": {
+              "type": "string"
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "approve": {
+        "type": "action"
+      },
+      "reject": {
+        "type": "action"
+      }
+    },
+    "id": "detailstimeview"
+  },
+  "loginpeoplesoft": {
+    "type": "object",
+    "comment": "Login",
+    "properties": {
+      "username": {
+        "type": "string",
+        "label": "username"
+      },
+      "password": {
+        "type": "string",
+        "label": "password"
+      },
+      "submit": {
+        "type": "action",
+        "parameters": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "back": {
+        "type": "action"
+      },
+      "home": {
+        "type": "action"
+      },
+      "errorMessage": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      }
+    },
+    "id": "loginpeoplesoft"
+  },
+  "detailtimecomments": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "totalHours": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "submitter": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "date": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "comments": {
+        "type": "string"
+      },
+      "back": {
+        "type": "action"
+      }
+    },
+    "id": "detailtimecomments"
+  },
+  "detailssalesforceaccount": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "back": {
+        "type": "action"
+      },
+      "reject": {
+        "type": "action"
+      },
+      "approve": {
+        "type": "action"
+      },
+      "status": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "amount": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "date": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "name": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "owner": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "type": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "accountName": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "comments": {
+        "type": "string"
+      }
+    },
+    "id": "detailssalesforceaccount"
+  },
+  "detailssalesforceoppor": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "reject": {
+        "type": "action"
+      },
+      "approve": {
+        "type": "action"
+      },
+      "status": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "amount": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "date": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "name": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "owner": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "closedDate": {
+        "type": "string"
+      },
+      "contact": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "stage": {
+        "type": "string"
+      },
+      "probability": {
+        "type": "string"
+      },
+      "forecastCategory": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "accountName": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "comments": {
+        "type": "string"
+      },
+      "accountID": {
+        "type": "string"
+      },
+      "fiscalQuarter": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "fiscalYear": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "forecast": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "back": {
+        "type": "action"
+      }
+    },
+    "id": "detailssalesforceoppor"
+  },
+  "commentsmodal": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "cancel": {
+        "type": "action"
+      },
+      "submit": {
+        "type": "action"
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "id": "commentsmodal"
+  },
+  "menu": {
+    "type": "object",
+    "properties": {
+      "home": {
+        "type": "action"
+      },
+      "settings": {
+        "type": "action"
+      }
+    },
+    "id": "menu"
+  },
+  "appsettings": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {},
+    "id": "appsettings"
+  },
+  "login": {
+    "type": "object",
+    "comment": "Login",
+    "properties": {
+      "username": {
+        "type": "string",
+        "label": "username"
+      },
+      "password": {
+        "type": "string",
+        "label": "password"
+      },
+      "submit": {
+        "type": "action",
+        "parameters": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "string"
+      }
+    },
+    "id": "login"
+  },
+  "home": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "approvals": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "details": {
+              "type": "action"
+            },
+            "isNew": {
+              "type": "boolean"
+            },
+            "resolved": {
+              "type": "boolean"
+            },
+            "approved": {
+              "type": "boolean"
+            },
+            "rejected": {
+              "type": "boolean"
+            },
+            "approve": {
+              "type": "action"
+            },
+            "reject": {
+              "type": "action"
+            },
+            "salesforce": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "string"
+                },
+                "vendor": {
+                  "type": "string",
+                  "update": {
+                    "type": "none"
+                  }
+                },
+                "date": {
+                  "type": "string",
+                  "update": {
+                    "type": "none"
+                  }
+                },
+                "employee": {
+                  "type": "string",
+                  "update": {
+                    "type": "none"
+                  }
+                },
+                "dataPrefix": {
+                  "type": "string"
+                }
+              }
+            },
+            "sap": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "string"
+                },
+                "expenseItem": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "employee": {
+                  "type": "string"
+                },
+                "dataPrefix": {
+                  "type": "string"
+                }
+              }
+            },
+            "expensify": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "string"
+                },
+                "expenseItem": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "employee": {
+                  "type": "string"
+                },
+                "dataPrefix": {
+                  "type": "string"
+                }
+              }
+            },
+            "peoplesoft": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "string"
+                },
+                "project": {
+                  "type": "string"
+                },
+                "dates": {
+                  "type": "string"
+                },
+                "employee": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "sortBy": {
+        "type": "select"
+      }
+    },
+    "id": "home"
+  }
+}

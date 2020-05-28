@@ -1,0 +1,96 @@
+{
+  "Approvals": [
+    {
+      "id": "25,000",
+      "icon": "salesforce",
+      "header": "Acme Company Inc.",
+      "subhead": "January 10, 2018",
+      "person": "Trevor Howard",
+      "hasAction1": true,
+      "action1": "",
+      "action1Text": "Reject",
+      "hasAction2": true,
+      "action2": "",
+      "action2Text": "Approve",
+      "type": "salesforce",
+      "idPrefix": "$",
+      "isNew": true,
+      "rejected": true,
+      "resolved": false
+    },
+    {
+      "id": "1499.5",
+      "icon": "zendesk",
+      "header": "Printer Ink",
+      "subhead": "January 08, 2018",
+      "person": "Chad Mendoza",
+      "hasAction1": true,
+      "action1": "",
+      "action1Text": "Reject",
+      "hasAction2": true,
+      "action2": "",
+      "action2Text": "Approve",
+      "type": "sap",
+      "idPrefix": "$",
+      "isNew": true,
+      "approved": true,
+      "resolved": true
+    },
+    {
+      "id": "1699.98",
+      "header": "New Laptop",
+      "subhead": "Jan 03, 2018 - Jan 05, 2018",
+      "person": "Grace Howell",
+      "hasAction1": true,
+      "action1": "",
+      "action1Text": "Reject",
+      "hasAction2": true,
+      "action2": "",
+      "action2Text": "Approve",
+      "details": "",
+      "type": "expensify",
+      "idPrefix": "$",
+      "approved": true,
+      "resolved": false
+    },
+    {
+      "id": "40",
+      "header": "Project - Lorem Ipsum",
+      "subhead": "January 7, 2018 - January 13, 2018",
+      "person": "Corey, Elise",
+      "hasAction1": true,
+      "action1": "",
+      "action1Text": "Reject",
+      "hasAction2": true,
+      "action2": "",
+      "action2Text": "Approve",
+      "details": "",
+      "type": "peoplesoft",
+      "idPrefix": "hours",
+      "rejected": true,
+      "resolved": true
+    }
+  ],
+  "SortBy": {
+    "options": [
+      {
+        "label": "All"
+      },
+      {
+        "label": "Salesforce"
+      },
+      {
+        "label": "Expensify"
+      },
+      {
+        "label": "SAP"
+      },
+      {
+        "label": "Peoplesoft"
+      }
+    ],
+    "selected": {
+      "label": "All"
+    }
+  }
+}

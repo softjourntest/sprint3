@@ -1,0 +1,59 @@
+{
+  "historyComments": [
+    {
+      "date": "Jan 08, 2018",
+      "comment": "You approved and forwarded this to report to louella.webb@companyabc.com"
+    },
+    {
+      "date": "Jan 06, 2018",
+      "comment": "You took control of this report."
+    },
+    {
+      "date": "Jan 05, 2018",
+      "comment": "grace.howell@companyabc.com created this report."
+    }
+  ],
+  "attachments": [
+    {
+      "date": "Jan 03, 2018",
+      "total": "$1299.99",
+      "merchant": "Apple"
+    },
+    {
+      "date": "Jan 05, 2018",
+      "total": "$399.99",
+      "merchant": "Apple"
+    }
+  ],
+  "categoryOne": [
+    {
+      "date": "Jan 03, 2018",
+      "merchant": "Apple",
+      "attachmentsNumber": "+1",
+      "amount": "$1299.99",
+      "comment": "13\" Laptop"
+    },
+    {
+      "date": "Jan 05, 2018",
+      "merchant": "Apple",
+      "attachmentsNumber": "+2",
+      "amount": "$399.99",
+      "comment": "Extra Battery pack and headphones"
+    }
+  ],
+  "id": "26561415",
+  "reporter": "Grace Howell",
+  "category": "Computer and Internet",
+  "comment": "",
+  "amount": "$1699.98",
+  "description": "New Laptop",
+  "date": "Jan 03, 2018 - Jan 05, 2018",
+  "type": "Expense Report",
+  "priority": "",
+  "details": "Mac Book Pro, 13\" Touch Bar and Touch ID\n3.1GHz Processor \n256GB Storage",
+  "subject": "",
+  "bugID": "$1549.57",
+  "quoteID": "",
+  "status": "Submitted",
+  "customerJob": "NA"
+}

@@ -1,0 +1,47 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="contrast" data-comp-id="navbar.1">
+        <ion-buttons data-comp-id="buttons.1" start="">
+            <button (click)="action('back')" data-comp-id="button.1" icon-only="" ion-button="">
+                <ion-icon class="ion-ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title data-comp-id="title.1">
+            <div data-comp-id="text.1" ion-text="">SAP Settings</div>
+        </ion-title>
+        <ion-buttons data-comp-id="buttons.2" end="">
+            <button (click)="action('home')" data-comp-id="button.2" icon-only="" ion-button="">
+                <ion-icon class="ion-ios-home"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content-light" data-comp-id="content.1">
+    <div data-comp-id="div.1" style="padding: 10% 15% 0%;" text-center="">
+        <img data-comp-id="img.1" src="assets/images/SAP-Logo.png" style="width: 140px;">
+    </div>
+    <ion-card color="calm" data-comp-id="card.1" style="padding: 10px; margin: 20px 12px;">
+        <div class="container-light" data-comp-id="div.2" style="padding: 0; margin: 0; background-color: #ffffff; border-radius: 10px;" text-center="">
+            <ion-item data-comp-id="input.1" style="border-bottom: 1px solid rgb(221,221,221);">
+                <ion-label stacked="">Username</ion-label>
+                <ion-input [(ngModel)]="data.username" placeholder="Type here..." type="text"></ion-input>
+            </ion-item>
+            <ion-item data-comp-id="input.2" style="margin: 5px 0 10px; border-bottom: 1px solid rgb(221,221,221);">
+                <ion-label stacked="">Password</ion-label>
+                <ion-input [(ngModel)]="data.password" placeholder="Type here..." type="password"></ion-input>
+            </ion-item>
+        </div>
+        <div data-comp-id="div.3">
+            <ion-item data-comp-id="toggle.1" style="margin: 10px 0px;">
+                <ion-label>Receive Notifications</ion-label>
+                <ion-toggle></ion-toggle>
+            </ion-item>
+        </div>
+    </ion-card>
+</ion-content>
+<ion-footer data-comp-id="footer.1">
+    <ion-row data-comp-id="row.1">
+        <ion-col class="button-col" data-comp-id="column.1" style="padding: 5px 20px;" text-center="">
+            <button (click)="action('submit')" block="" color="primary" data-comp-id="button.1" ion-button=""><span>Save</span></button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

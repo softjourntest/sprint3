@@ -1,0 +1,8 @@
+screen-detailstimeview-phoneportrait {
+    .card-md {
+        border-right: 1px solid color($colors, primary, base);
+    }
+      .card-ios .item-ios.item-block .item-inner {
+         padding-right: 1px;
+    }
+}

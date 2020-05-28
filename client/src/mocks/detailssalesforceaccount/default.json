@@ -1,0 +1,11 @@
+{
+  "amount": "$25,000.00",
+  "owner": "Trevor Howard",
+  "name": "IT Department",
+  "status": "Pending",
+  "accountName": "Acme Company",
+  "notes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem",
+  "comments": "",
+  "date": "January 10, 2018",
+  "type": "Prospect"
+}

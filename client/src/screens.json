@@ -1,0 +1,111 @@
+{
+  "id": "__BASE__",
+  "name": "appr",
+  "screens": [
+    {
+      "id": "login",
+      "name": "Login",
+      "sourceScreenId": "login",
+      "sourceAppId": "ApprovalsTemplate",
+      "disableMenuSwipe": true,
+      "statusbarContent": null,
+      "statusbarHidden": null
+    },
+    {
+      "id": "home",
+      "name": "Home",
+      "sourceScreenId": "home",
+      "sourceAppId": "ApprovalsTemplate",
+      "statusbarContent": null,
+      "statusbarHidden": null
+    },
+    {
+      "id": "detailsexpensify1",
+      "name": "Details-Expensify-1",
+      "sourceScreenId": "detailsexpensify1",
+      "sourceAppId": "ApprovalsTemplate",
+      "statusbarContent": "light"
+    },
+    {
+      "id": "detailsexpensify2",
+      "name": "Details-Expensify-2",
+      "sourceScreenId": "detailsexpensify2",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "detailssalesforceoppor",
+      "name": "Details-Salesforce-Oppor",
+      "sourceScreenId": "detailssalesforceoppor",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "detailssalesforceaccount",
+      "name": "Details-Salesforce-Account",
+      "sourceScreenId": "detailssalesforceaccount",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "detailssap",
+      "name": "Details-SAP",
+      "sourceScreenId": "detailssap",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "detailstimeview",
+      "name": "Details-TimeView",
+      "sourceScreenId": "detailstimeview",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "detailtimecomments",
+      "name": "Detail-TimeComments",
+      "sourceScreenId": "detailtimecomments",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "sourceScreenId": "settings",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "loginexpensify",
+      "name": "Login-Expensify",
+      "sourceScreenId": "loginexpensify",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "loginsap",
+      "name": "Login-SAP",
+      "sourceScreenId": "loginsap",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "loginsalesforce",
+      "name": "Login-Salesforce",
+      "sourceScreenId": "loginsalesforce",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "loginpeoplesoft",
+      "name": "Login-PeopleSoft",
+      "sourceScreenId": "loginpeoplesoft",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "commentsmodal",
+      "name": "Comments-Modal",
+      "sourceScreenId": "commentsmodal",
+      "sourceAppId": "ApprovalsTemplate"
+    },
+    {
+      "id": "appsettings",
+      "name": "App Settings",
+      "modal": true,
+      "sourceScreenId": "appsettings",
+      "sourceAppId": "ApprovalsTemplate",
+      "preventAutoDismiss": true
+    }
+  ],
+  "startScreen": "login"
+}
